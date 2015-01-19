@@ -15,15 +15,17 @@
 	<script>
 
 	console.log('passou aqui');
-		alert('ola');
+		console.log('ola');
 
 	$("form").submit(function( event ) {
-		nometamanho =$("input").val().length();
+		console.log('ooooo');
+
+		nometamanho =$("input").val().length;
 		console.log(nometamanho);
 
 		if ( nometamanho<5 ) {
 			$( ".nome-erro" ).show();
-			return;
+			return false;
 		};
 		//$( ".nome-erro" ).text( "not Valid").show().fadeout ( 1000 );
 	event.preventDefault();
