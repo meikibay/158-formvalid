@@ -16,7 +16,8 @@
 	<label for ="password">Password Confirm</label>
 	<input id="password_confirm" type="password" name="password_confirm" value="">
 	<span class="password-erro"> As passwords devem ser iguais </span>
-
+	<br></br>
+	<input type="submit">
 	</form>
 
 	<script src="jquery.js"></script>
@@ -37,6 +38,8 @@
 		};
 
 		$( ".nome-erro").hide();
+		console.log($("#password").val());
+		console.log($("#password_confirm").val());
 
 		if ($( "#password" ).val() != $("#password_confirm").val() ) {
 			$(".password-erro").show();
