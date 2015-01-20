@@ -38,6 +38,11 @@
 
 		$( ".nome-erro").hide();
 
+		if ($( "#password" ).val() != $("#password_confirm").val() ) {
+			$(".password-erro").show();
+			return false;
+		};
+
 		//$( ".nome-erro" ).text( "not Valid").show().fadeout ( 1000 );
 	event.preventDefault();
 	});
