@@ -11,10 +11,10 @@
 	<span class="nome-erro"> O nome deve ter mais de 5 letras </span>
 
 	<label for ="password">Password</label>
-	<input id="password" type="password" name="password" value="">
+	<input id="password" type="password" name="password" value="" required>
 
 	<label for ="password">Password Confirm</label>
-	<input id="password_confirm" type="password" name="password_confirm" value="">
+	<input id="password_confirm" type="password" name="password_confirm" value="" required>
 	<span class="password-erro"> As passwords devem ser iguais </span>
 	<br></br>
 	<input type="submit">
@@ -38,6 +38,7 @@
 		};
 
 		$( ".nome-erro").hide();
+
 		console.log($("#password").val());
 		console.log($("#password_confirm").val());
 
@@ -45,6 +46,9 @@
 			$(".password-erro").show();
 			return false;
 		};
+
+		$( ".password-erro").hide();
+
 
 		//$( ".nome-erro" ).text( "not Valid").show().fadeout ( 1000 );
 	event.preventDefault();
